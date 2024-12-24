@@ -3,6 +3,12 @@
 import { useState } from "react"
 import Link from "next/link"
 import {
+    SignInButton,
+    SignedIn,
+    SignedOut,
+    UserButton
+} from '@clerk/nextjs'
+import {
     Avatar,
     AvatarFallback,
     AvatarImage,
@@ -36,9 +42,10 @@ const Navbar = () => {
                         </nav>
                     </div>
                     <div className="flex items-center">
-                        {isSignedIn ? (
-                            <DropdownMenu>
-                                <DropdownMenuTrigger asChild>
+                        <SignedIn>
+                            {/* <DropdownMenu> */}
+                            <UserButton />
+                            {/* <DropdownMenuTrigger asChild>
                                     <Button variant="ghost" className="relative h-8 w-8 rounded-full">
                                         <Avatar className="h-8 w-8">
                                             <AvatarImage src="/placeholder.svg?height=32&width=32" alt={'cc'} />
@@ -55,13 +62,12 @@ const Navbar = () => {
                                         <LogOut className="mr-2 h-4 w-4" />
                                         <span>Log out</span>
                                     </DropdownMenuItem>
-                                </DropdownMenuContent>
-                            </DropdownMenu>
-                        ) : (
-                            <Button variant="ghost" onClick={toggleSignIn}>
-                                Sign In
-                            </Button>
-                        )}
+                                </DropdownMenuContent> */}
+                            {/* </DropdownMenu> */}
+                        </SignedIn>
+                        <SignedOut>
+                            <SignInButton />
+                        </SignedOut>
                     </div>
                 </div>
             </div>

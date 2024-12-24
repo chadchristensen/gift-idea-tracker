@@ -38,3 +38,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Tools used:
 
 * https://www.softr.io/tools/svg-shape-generator
+* Convex DB
+* Clerk Auth
